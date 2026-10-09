@@ -47,8 +47,19 @@ class BudgetTests(unittest.TestCase):
         with patch.object(c,"config",return_value=CFG), patch.object(c,"accounts",return_value=["a"]), patch.dict(c.os.environ,{"APIFY_TOKEN":""}):
             with patch.object(c,"api") as api:
                 c.prepare("no-token"); api.assert_not_called()
-        with patch.object(c,"config",return_value=CFG), patch.object(c,"accounts",return_value=["a"]), patch.dict(c.os.environ,{"APIFY_TOKEN":"test"}), patch.object(c,"api",return_value={"data":{"plan":{"tier":"BRONZE","monthlyBasePriceUsd":19}}}):
+        with patch.object(c,"config",return_value=CFG), patch.object(c,"accounts",return_value=["a"]), patch.dict(c.os.environ,{"APIFY_TOKEN":"test","APIFY_PLAN_CHECK_TOKEN":"plan-check"}), patch.object(c,"api",return_value={"data":{"plan":{"tier":"BRONZE","monthlyBasePriceUsd":19}}}):
             with self.assertRaises(ValueError): c.prepare("paid")
+
+    def test_missing_plan_check_token_blocks_execution(self):
+        with patch.object(c,"config",return_value=CFG), patch.object(c,"accounts",return_value=["a"]), patch.dict(c.os.environ,{"APIFY_TOKEN":"collection-only","APIFY_PLAN_CHECK_TOKEN":""}), patch.object(c,"api") as api:
+            with self.assertRaises(ValueError): c.prepare("missing-plan-check")
+            api.assert_not_called()
+
+    def test_separate_plan_token_is_used_only_for_verification(self):
+        with test_directory() as temp, patch.object(c,"ROOT",Path(temp)), patch.object(c,"config",return_value=CFG), patch.object(c,"accounts",return_value=["a"]), patch.dict(c.os.environ,{"APIFY_TOKEN":"collection-only","APIFY_PLAN_CHECK_TOKEN":"plan-check"}), patch.object(c,"api",return_value={"data":{"plan":{"tier":"FREE","monthlyBasePriceUsd":0}}}) as api:
+            c.prepare("separate-plan-check")
+            api.assert_called_once_with("plan-check","users/me")
+            self.assertEqual(c.read(Path(temp)/"data/budget.json")["reservations"][0]["status"],"reserved")
 
     def test_corrupt_ledger_does_not_reset(self):
         with test_directory() as temp:
