@@ -93,8 +93,13 @@ def prepare(run_id):
     if not token or not handles:
         print("No token/accounts: automatic collection disabled; manual mode available.")
         return
-    # The response includes private data: never print it.
-    plan = api(token, "users/me").get("data", {}).get("plan", {})
+    # Scoped collection tokens cannot read account-level plan data.
+    # Keep the separate account token out of Actor execution.
+    plan_token = os.getenv("APIFY_PLAN_CHECK_TOKEN", "").strip()
+    if not plan_token:
+        raise ValueError("Plan-check token missing; refusing actor execution")
+    # The response includes private data: never print or save it.
+    plan = api(plan_token, "users/me").get("data", {}).get("plan", {})
     if plan.get("tier") != "FREE" or plan.get("monthlyBasePriceUsd") != 0:
         raise ValueError("Cannot verify a Free plan; refusing actor execution")
     state = read(ROOT / "data/budget.json", {"cursor": 0, "reservations": []})
