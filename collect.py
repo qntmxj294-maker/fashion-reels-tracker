@@ -221,6 +221,16 @@ def main():
 if __name__ == "__main__":
     try:
         main()
+    except urllib.error.HTTPError as error:
+        detail = ""
+        try:
+            kind = json.loads(error.read()).get("error", {}).get("type", "")
+            if isinstance(kind, str) and re.fullmatch(r"[a-z0-9-]{1,100}", kind):
+                detail = " (" + kind + ")"
+        except Exception:
+            pass
+        print("Stopped: HTTP " + str(error.code) + detail + ". No private response data logged.", file=sys.stderr)
+        sys.exit(1)
     except Exception as error:
         print("Stopped: " + type(error).__name__ + ". Check configuration, Free plan and Actions status.", file=sys.stderr)
         sys.exit(1)
