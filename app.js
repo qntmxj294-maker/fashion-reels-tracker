@@ -18,7 +18,15 @@ function combine(auto, manual) {
   // Keep both observations when one link has an API record and a manual annotation.
   return [...auto, ...manual];
 }
-if (typeof module !== 'undefined') module.exports = {cleanReel, combine};
+function onePerAccount(rows) {
+  const best = new Map();
+  for (const row of rows) {
+    const key = row.username.toLowerCase(), previous = best.get(key);
+    if (!previous || row.views > previous.views || (row.views === previous.views && (Date.parse(row.checked_at)||0) > (Date.parse(previous.checked_at)||0))) best.set(key,row);
+  }
+  return [...best.values()];
+}
+if (typeof module !== 'undefined') module.exports = {cleanReel, combine, onePerAccount};
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
   const KEY = 'wondukgu-reels-manual-v2';
@@ -43,7 +51,7 @@ if (typeof document !== 'undefined') {
     const q=$('search').value.trim().toLowerCase(), mode=$('source').value, sort=$('sort').value;
     const all=combine(auto,manual);
     $('total').textContent=fmt(new Set(all.map(r=>r.id)).size);
-    const rows=all.filter(r=>(mode==='all'||r.source.startsWith(mode+':')) && (r.username+' '+r.note+' '+r.category).toLowerCase().includes(q));
+    const rows=onePerAccount(all.filter(r=>(mode==='all'||r.source.startsWith(mode+':')) && (r.username+' '+r.note+' '+r.category).toLowerCase().includes(q)));
     rows.sort((a,b)=>sort==='views'?b.views-a.views:(Date.parse(b[sort==='recent'?'posted_at':'checked_at'])||0)-(Date.parse(a[sort==='recent'?'posted_at':'checked_at'])||0));
     $('cards').replaceChildren();
     if (!rows.length) {
@@ -59,7 +67,15 @@ if (typeof document !== 'undefined') {
         button.onclick=()=>{manual=manual.filter(x=>x.id!==row.id);save();render();};top.append(button);
       }
       const views=el('div','views',fmt(row.views));views.append(el('span','','회'));
-      card.append(top,el('div','handle','@'+row.username),views,el('div','record','기록 '+date(row.checked_at)));
+      const preview=el('iframe','reel-preview');
+      preview.src=row.url+'embed/';
+      preview.title='@'+row.username+' 릴스 미리보기';
+      preview.loading='lazy';
+      preview.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+      preview.allowFullscreen=true;
+      preview.referrerPolicy='strict-origin-when-cross-origin';
+      card.append(top,el('div','handle','@'+row.username),preview,views,el('div','record','기록 '+date(row.checked_at)));
+      card.append(el('div','record','미리보기가 열리지 않으면 아래 원본 보기를 눌러주세요.'));
       if (row.posted_at) card.append(el('div','record','게시 '+date(row.posted_at)));
       card.append(el('div','record',isManual?'조회수를 사용자가 입력한 자료':'수집 지표: '+(row.metric||'기존 기록')));
       if(row.category!=='미분류')card.append(el('div','record',row.category));
@@ -119,6 +135,7 @@ if (typeof document !== 'undefined') {
       for(const entry of status.accounts||[]){$('details').append(el('p','', '@'+entry.username+' · '+(entry.status==='response_received'?'응답 수신 / 조건 통과 '+entry.qualifying+'개':'실패 / '+(entry.error||'확인 필요'))));}
       if((status.accounts||[]).some(r=>r.status==='error'))$('status').textContent+=' 일부 계정 수집이 실패했습니다. 상세 상태를 확인하세요.';
     }
+    $('status').textContent+=' 같은 계정은 조회수가 가장 높은 영상 1개만 표시합니다.';
     render();
   }
   ['search','source','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));
