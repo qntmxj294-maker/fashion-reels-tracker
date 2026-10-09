@@ -1,6 +1,6 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
-const {cleanReel,combine}=require('./app.js');
+const {cleanReel,combine,onePerAccount}=require('./app.js');
 const row={url:'https://www.instagram.com/reel/Ab12/?utm_source=test',username:'@WONDUKGU',views:10000000,checked_at:'2026-10-09T00:00:00Z'};
 test('canonical reel URL and threshold boundary',()=>{
   const clean=cleanReel(row,'manual:entered');
@@ -19,4 +19,11 @@ test('import cannot assign an API source and note/date are bounded',()=>{
 });
 test('manual annotation does not replace API observation',()=>{
   assert.equal(combine([cleanReel(row,'auto:filtered')],[cleanReel(row,'manual:entered')]).length,2);
+});
+test('show only the highest-view reel per account without deleting observations',()=>{
+  const input=[{username:'wisdm',views:12000000},{username:'WISDM',views:37000000},{username:'other',views:15000000}];
+  const result=onePerAccount(input);
+  assert.equal(result.length,2);
+  assert.equal(result.find(r=>r.username.toLowerCase()==='wisdm').views,37000000);
+  assert.equal(input.length,3);
 });
