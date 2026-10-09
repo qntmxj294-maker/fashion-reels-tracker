@@ -25,6 +25,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Check Free plan and reserve budget
+        env:
+          APIFY_PLAN_CHECK_TOKEN: ${{ secrets.APIFY_PLAN_CHECK_TOKEN }}
         run: python collect.py prepare
       - name: Persist reservation before actor execution
         run: |
