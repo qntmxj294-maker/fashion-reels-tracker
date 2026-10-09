@@ -6,6 +6,8 @@
 
 사이트: https://qntmxj294-maker.github.io/fashion-reels-tracker/
 
+보관함은 **같은 계정당 조회수가 가장 높은 릴스 1개**만 표시합니다. 기존 수집 기록과 JSON 백업에는 전체 자료가 유지됩니다. 카드 안에 Instagram 미리보기를 표시하며, 공개 여부·작성자의 임베드 허용·브라우저 설정에 따라 미리보기가 제한되면 원본 링크로 확인할 수 있습니다. 미리보기는 Instagram에서 직접 불러옵니다.
+
 추적 계정을 4개에서 **12개**로 확대했습니다. 신규 계정은 `timdessaint`, `young_emperors`, `leoniehanne`, `chrisellelim`, `edgyalbert`, `alexcosta`, `camilacoelho`, `jessicawang`입니다. 새 계정을 앞에 배치해 다음 실제 수집일부터 먼저 확인합니다. 하루 4개씩 약 3일 주기로 순환하며, 계정별·최근 31일 예산 한도는 같습니다. 추가 계정의 1,000만 조회수 이상 결과는 실제 수집 전까지 보장하지 않습니다.
 
 계정 선정 참고: [Young Emperors의 커플 패션](https://www.vogue.com/article/young-emperors-matching-couple-instagram), [Edgy Albert의 남성 패션](https://www.esquire.com/style/big-black-book-summer-2024/a60873213/albert-muzquiz-edgy-mens-fashion-style-interview/), [패션 위크 크리에이터](https://xoxofashionmag.com/top-influencers-to-follow-during-nyfw/), [Tim Dessaint](https://keepface.com/timdessaint), [Alex Costa](https://qoruz.com/alexcosta/instagram).
