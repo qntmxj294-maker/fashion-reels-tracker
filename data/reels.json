@@ -1,1 +1,91 @@
-{"last_successful_check":null,"last_new_items":0,"monitored_accounts":[],"items":[]}
+{
+  "last_successful_check": null,
+  "last_new_items": 0,
+  "monitored_accounts": [
+    "wondukgu",
+    "wisdm",
+    "bestdressed",
+    "sangiev"
+  ],
+  "items": [
+    {
+      "id": "DWHuY7ggT7Z",
+      "url": "https://www.instagram.com/reel/DWHuY7ggT7Z/",
+      "username": "wisdm",
+      "views": 37094069,
+      "metric": "play_count",
+      "likes": 6078488,
+      "comments": 63683,
+      "posted_at": "2026-03-20T21:05:24.890Z",
+      "checked_at": "2026-10-09T17:53:07.337161+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    },
+    {
+      "id": "DbEL4AxJ-Go",
+      "url": "https://www.instagram.com/reel/DbEL4AxJ-Go/",
+      "username": "wisdm",
+      "views": 30641728,
+      "metric": "play_count",
+      "likes": 2930341,
+      "comments": 28529,
+      "posted_at": "2026-07-21T18:43:04.379Z",
+      "checked_at": "2026-10-09T17:53:07.337161+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    },
+    {
+      "id": "DXHofhzjYQe",
+      "url": "https://www.instagram.com/reel/DXHofhzjYQe/",
+      "username": "wisdm",
+      "views": 21901910,
+      "metric": "play_count",
+      "likes": 1867212,
+      "comments": 11900,
+      "posted_at": "2026-04-14T16:45:16.864Z",
+      "checked_at": "2026-10-09T17:53:07.337161+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    },
+    {
+      "id": "DWcBiNbiVjJ",
+      "url": "https://www.instagram.com/reel/DWcBiNbiVjJ/",
+      "username": "wisdm",
+      "views": 16894850,
+      "metric": "play_count",
+      "likes": 2122087,
+      "comments": 10667,
+      "posted_at": "2026-03-28T18:17:31.024Z",
+      "checked_at": "2026-10-09T17:53:07.337161+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    },
+    {
+      "id": "DbeQulvpkzq",
+      "url": "https://www.instagram.com/reel/DbeQulvpkzq/",
+      "username": "wisdm",
+      "views": 12983033,
+      "metric": "play_count",
+      "likes": 1174791,
+      "comments": 9047,
+      "posted_at": "2026-07-31T21:45:43.864Z",
+      "checked_at": "2026-10-09T17:53:07.337161+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    },
+    {
+      "id": "DXmtpB_if6x",
+      "url": "https://www.instagram.com/reel/DXmtpB_if6x/",
+      "username": "wisdm",
+      "views": 12936704,
+      "metric": "play_count",
+      "likes": 1182144,
+      "comments": 246957,
+      "posted_at": "2026-04-26T18:26:43.544Z",
+      "checked_at": "2026-10-09T17:53:07.337161+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    }
+  ],
+  "last_api_response_at": "2026-10-09T17:53:07.337161+00:00"
+}

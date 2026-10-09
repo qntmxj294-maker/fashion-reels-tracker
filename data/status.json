@@ -1,1 +1,37 @@
-{"last_attempt_at":null,"accounts":[]}
+{
+  "last_attempt_at": "2026-10-09T17:53:07.337161+00:00",
+  "provider": "filtered",
+  "accounts": [
+    {
+      "username": "wondukgu",
+      "status": "response_received",
+      "returned": 0,
+      "qualifying": 0,
+      "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
+    },
+    {
+      "username": "wisdm",
+      "status": "response_received",
+      "returned": 6,
+      "qualifying": 6,
+      "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
+    },
+    {
+      "username": "bestdressed",
+      "status": "response_received",
+      "returned": 0,
+      "qualifying": 0,
+      "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
+    },
+    {
+      "username": "sangiev",
+      "status": "response_received",
+      "returned": 0,
+      "qualifying": 0,
+      "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
+    }
+  ],
+  "reserved_cap_usd": 0.08,
+  "rolling_31_day_cap_usd": 3.0,
+  "new_items": 6
+}
