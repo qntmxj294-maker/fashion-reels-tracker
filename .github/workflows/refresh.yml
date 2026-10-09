@@ -1,0 +1,64 @@
+name: Daily fashion reels refresh
+on:
+  schedule:
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: fashion-reels-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+    env:
+      APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      COLLECTION_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Free plan and reserve budget
+        run: python collect.py prepare
+      - name: Persist reservation before actor execution
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- data/budget.json; then
+            git add data/budget.json
+            git commit -m "Reserve daily collection budget"
+            git push
+          fi
+      - name: Collect within account caps
+        run: python collect.py collect
+      - name: Persist partial results and errors
+        if: always()
+        run: |
+          if ! git diff --quiet -- data; then
+            git add data
+            git commit -m "Save reel collection results"
+            git push
+          fi
+      - name: Configure Pages
+        if: always()
+        uses: actions/configure-pages@v5
+      - name: Prepare website files
+        if: always()
+        run: |
+          mkdir -p site/data
+          cp index.html app.js style.css site/
+          cp data/reels.json data/status.json data/budget.json site/data/
+      - name: Upload website
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy website
+        if: always()
+        uses: actions/deploy-pages@v4
