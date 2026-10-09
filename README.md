@@ -6,6 +6,10 @@
 
 사이트: https://qntmxj294-maker.github.io/fashion-reels-tracker/
 
+추적 계정을 4개에서 **12개**로 확대했습니다. 신규 계정은 `timdessaint`, `young_emperors`, `leoniehanne`, `chrisellelim`, `edgyalbert`, `alexcosta`, `camilacoelho`, `jessicawang`입니다. 새 계정을 앞에 배치해 다음 실제 수집일부터 먼저 확인합니다. 하루 4개씩 약 3일 주기로 순환하며, 계정별·최근 31일 예산 한도는 같습니다. 추가 계정의 1,000만 조회수 이상 결과는 실제 수집 전까지 보장하지 않습니다.
+
+계정 선정 참고: [Young Emperors의 커플 패션](https://www.vogue.com/article/young-emperors-matching-couple-instagram), [Edgy Albert의 남성 패션](https://www.esquire.com/style/big-black-book-summer-2024/a60873213/albert-muzquiz-edgy-mens-fashion-style-interview/), [패션 위크 크리에이터](https://xoxofashionmag.com/top-influencers-to-follow-during-nyfw/), [Tim Dessaint](https://keepface.com/timdessaint), [Alex Costa](https://qoruz.com/alexcosta/instagram).
+
 2026-10-10 02:53 한국시간, 등록 4개 계정의 API 응답을 받아 1,000만 조회수 이상 릴스 6개를 저장하고 사이트 배포까지 완료했습니다. 이번 결과 6개는 `wisdm` 계정입니다. 예산 제한에 따른 일부 결과이며 전수 조사 결과가 아닙니다.
 
 Apify Billing 화면 기준 무료 $5 중 $0.04 사용, $4.96 잔여를 확인했습니다. 사이트의 $0.08은 실패·재시도에도 유지하는 보수적인 예약 상한 합계로, 실제 사용액과 다릅니다. 매일 한국시간 09:17 예약 실행이며 지연될 수 있습니다.
@@ -32,7 +36,7 @@ API 계정·토큰·결제가 필요 없습니다. 조회수를 자동으로 확
 3. Settings → Pages → Source에서 **GitHub Actions**를 선택합니다.
 4. Apify 계정을 만들고 Billing → Subscription에서 **Free** 상태를 확인합니다. 유료 업그레이드는 필요 없습니다.
 5. GitHub의 Settings → Secrets and variables → Actions에 토큰을 저장합니다. **`APIFY_TOKEN`**은 지정 수집기 Read·Run과 기본 실행 저장소만 허용한 전용 키입니다. 무료 요금제 조회 `/users/me`는 이 제한 키로 403 오류가 나므로, 별도 **`APIFY_PLAN_CHECK_TOKEN`**이 필요합니다. 이 키는 Apify 계정 전체 권한이므로 소유자의 별도 승인 후 생성·저장해야 합니다. 워크플로는 요금제 확인 단계에만 이 키를 전달하며, 외부 수집기 실행에는 수집 전용 키만 사용합니다. HTML·JSON·소스에 토큰을 넣지 마세요.
-6. `accounts.json`에 추적할 **공개 패션 계정**을 입력합니다. 기존 4개는 원본에서 가져온 예시이며, 계정의 현재 공개 상태·패션 적합성은 별도 확인이 필요합니다.
+6. `accounts.json`에 추적할 **공개 패션 계정**을 입력합니다. 현재 원본 4개와 추가 8개, 총 12개입니다. 원본 4개의 적합성과 추가 계정의 현재 수집 가능 여부는 결과를 보고 판단하세요.
 7. Actions → **Daily fashion reels refresh** → Run workflow를 실행합니다. 비용 예약 후 수집합니다. 같은 한국 날짜의 추가 실행·재시도는 수집을 건너뜁니다.
 8. Settings → Pages에 표시된 사이트 주소를 엽니다. 실패 시 Actions 로그와 `data/status.json`을 확인하세요.
 
