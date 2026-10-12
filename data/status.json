@@ -1,30 +1,30 @@
 {
-  "last_attempt_at": "2026-10-11T05:57:11.623228+00:00",
+  "last_attempt_at": "2026-10-12T06:07:27.781530+00:00",
   "provider": "filtered",
   "accounts": [
     {
-      "username": "timdessaint",
+      "username": "edgyalbert",
       "status": "response_received",
       "returned": 0,
       "qualifying": 0,
       "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
     },
     {
-      "username": "young_emperors",
+      "username": "alexcosta",
       "status": "response_received",
-      "returned": 5,
-      "qualifying": 5,
+      "returned": 0,
+      "qualifying": 0,
       "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
     },
     {
-      "username": "leoniehanne",
+      "username": "camilacoelho",
       "status": "response_received",
-      "returned": 1,
-      "qualifying": 1,
+      "returned": 3,
+      "qualifying": 3,
       "note": "Budget-limited output; an empty dataset does not prove no popular reels exist."
     },
     {
-      "username": "chrisellelim",
+      "username": "jessicawang",
       "status": "response_received",
       "returned": 0,
       "qualifying": 0,
@@ -33,5 +33,5 @@
   ],
   "reserved_cap_usd": 0.08,
   "rolling_31_day_cap_usd": 3.0,
-  "new_items": 6
+  "new_items": 3
 }
