@@ -20,12 +20,12 @@
       "id": "DVBvY5yDoIl",
       "url": "https://www.instagram.com/reel/DVBvY5yDoIl/",
       "username": "camilacoelho",
-      "views": 47761749,
+      "views": 47767588,
       "metric": "play_count",
       "likes": 1411359,
       "comments": 8577,
       "posted_at": "2026-02-21T16:47:18.717Z",
-      "checked_at": "2026-10-21T04:58:18.890425+00:00",
+      "checked_at": "2026-10-24T04:45:27.373536+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-12T06:07:27.781530+00:00"
     },
@@ -189,12 +189,12 @@
       "id": "Dad4rdltw-Q",
       "url": "https://www.instagram.com/reel/Dad4rdltw-Q/",
       "username": "camilacoelho",
-      "views": 11965570,
+      "views": 11967057,
       "metric": "play_count",
-      "likes": 563339,
+      "likes": 563308,
       "comments": 6084,
       "posted_at": "2026-07-06T21:44:11.684Z",
-      "checked_at": "2026-10-21T04:58:18.890425+00:00",
+      "checked_at": "2026-10-24T04:45:27.373536+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-12T06:07:27.781530+00:00"
     },
@@ -225,5 +225,5 @@
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     }
   ],
-  "last_api_response_at": "2026-10-23T05:00:25.413840+00:00"
+  "last_api_response_at": "2026-10-24T04:45:27.373536+00:00"
 }
