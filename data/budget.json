@@ -1,5 +1,5 @@
 {
-  "cursor": 0,
+  "cursor": 4,
   "reservations": [
     {
       "id": "37969385981-1",
@@ -368,6 +368,28 @@
       "per_account_cap_usd": "0.02",
       "status": "complete",
       "finished_at": "2026-10-25T04:52:51.711574+00:00"
+    },
+    {
+      "id": "40271632131-1",
+      "day_kst": "2026-10-26",
+      "reserved_at": "2026-10-26T04:56:49.385137+00:00",
+      "accounts": [
+        "timdessaint",
+        "young_emperors",
+        "leoniehanne",
+        "chrisellelim"
+      ],
+      "config": {
+        "provider": "filtered",
+        "accounts_per_day": 4,
+        "per_account_cap_usd": 0.02,
+        "rolling_31_day_cap_usd": 3.0,
+        "max_reels_per_profile": 50,
+        "newer_than_days": 365
+      },
+      "cap_usd": 0.08,
+      "per_account_cap_usd": "0.02",
+      "status": "reserved"
     }
   ]
 }
