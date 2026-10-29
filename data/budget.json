@@ -458,7 +458,8 @@
       },
       "cap_usd": 0.08,
       "per_account_cap_usd": "0.02",
-      "status": "reserved"
+      "status": "complete",
+      "finished_at": "2026-10-29T05:57:29.819818+00:00"
     }
   ]
 }
