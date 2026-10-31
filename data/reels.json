@@ -33,12 +33,12 @@
       "id": "DWHuY7ggT7Z",
       "url": "https://www.instagram.com/reel/DWHuY7ggT7Z/",
       "username": "wisdm",
-      "views": 37338277,
+      "views": 37383232,
       "metric": "play_count",
-      "likes": 6091121,
-      "comments": 63744,
+      "likes": 6093923,
+      "comments": 63780,
       "posted_at": "2026-03-20T21:05:24.890Z",
-      "checked_at": "2026-10-28T05:52:37.974205+00:00",
+      "checked_at": "2026-10-31T05:53:44.551300+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-09T17:53:07.337161+00:00"
     },
@@ -59,12 +59,12 @@
       "id": "DbEL4AxJ-Go",
       "url": "https://www.instagram.com/reel/DbEL4AxJ-Go/",
       "username": "wisdm",
-      "views": 30968595,
+      "views": 30990917,
       "metric": "play_count",
-      "likes": 2951970,
-      "comments": 28580,
+      "likes": 2952745,
+      "comments": 28581,
       "posted_at": "2026-07-21T18:43:04.379Z",
-      "checked_at": "2026-10-28T05:52:37.974205+00:00",
+      "checked_at": "2026-10-31T05:53:44.551300+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-09T17:53:07.337161+00:00"
     },
@@ -163,14 +163,27 @@
       "id": "DbeQulvpkzq",
       "url": "https://www.instagram.com/reel/DbeQulvpkzq/",
       "username": "wisdm",
-      "views": 14771481,
+      "views": 14891575,
       "metric": "play_count",
-      "likes": 1314774,
-      "comments": 9504,
+      "likes": 1326460,
+      "comments": 9529,
       "posted_at": "2026-07-31T21:45:43.864Z",
-      "checked_at": "2026-10-28T05:52:37.974205+00:00",
+      "checked_at": "2026-10-31T05:53:44.551300+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-09T17:53:07.337161+00:00"
+    },
+    {
+      "id": "De5LYuqpgWE",
+      "url": "https://www.instagram.com/reel/De5LYuqpgWE/",
+      "username": "wisdm",
+      "views": 13418898,
+      "metric": "play_count",
+      "likes": 1693306,
+      "comments": 12481,
+      "posted_at": "2026-10-24T22:12:43.950Z",
+      "checked_at": "2026-10-31T05:53:44.551300+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-28T05:52:37.974205+00:00"
     },
     {
       "id": "DXmtpB_if6x",
@@ -212,19 +225,6 @@
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     },
     {
-      "id": "De5LYuqpgWE",
-      "url": "https://www.instagram.com/reel/De5LYuqpgWE/",
-      "username": "wisdm",
-      "views": 11108961,
-      "metric": "play_count",
-      "likes": 1392894,
-      "comments": 10733,
-      "posted_at": "2026-10-24T22:12:43.950Z",
-      "checked_at": "2026-10-28T05:52:37.974205+00:00",
-      "source": "auto:filtered",
-      "first_found_at": "2026-10-28T05:52:37.974205+00:00"
-    },
-    {
       "id": "DaLtE99zggF",
       "url": "https://www.instagram.com/reel/DaLtE99zggF/",
       "username": "leoniehanne",
@@ -238,18 +238,31 @@
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     },
     {
+      "id": "DepFErGpGXK",
+      "url": "https://www.instagram.com/reel/DepFErGpGXK/",
+      "username": "wisdm",
+      "views": 10353939,
+      "metric": "play_count",
+      "likes": 1014610,
+      "comments": 6015,
+      "posted_at": "2026-10-18T16:09:43.014Z",
+      "checked_at": "2026-10-31T05:53:44.551300+00:00",
+      "source": "auto:filtered",
+      "first_found_at": "2026-10-31T05:53:44.551300+00:00"
+    },
+    {
       "id": "DZ3UZSYJbRI",
       "url": "https://www.instagram.com/reel/DZ3UZSYJbRI/",
       "username": "wisdm",
-      "views": 10062873,
+      "views": 10106234,
       "metric": "play_count",
-      "likes": 987089,
-      "comments": 4554,
+      "likes": 992158,
+      "comments": 4567,
       "posted_at": "2026-06-21T22:16:00.009Z",
-      "checked_at": "2026-10-28T05:52:37.974205+00:00",
+      "checked_at": "2026-10-31T05:53:44.551300+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-25T04:52:31.428326+00:00"
     }
   ],
-  "last_api_response_at": "2026-10-30T05:57:57.690379+00:00"
+  "last_api_response_at": "2026-10-31T05:53:44.551300+00:00"
 }
