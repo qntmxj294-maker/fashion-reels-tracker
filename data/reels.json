@@ -46,12 +46,12 @@
       "id": "DUilnqRjsci",
       "url": "https://www.instagram.com/reel/DUilnqRjsci/",
       "username": "young_emperors",
-      "views": 31808321,
+      "views": 31808522,
       "metric": "play_count",
-      "likes": 1082677,
-      "comments": 542,
+      "likes": 1082499,
+      "comments": 541,
       "posted_at": "2026-02-09T14:25:29.340Z",
-      "checked_at": "2026-10-29T05:56:31.147619+00:00",
+      "checked_at": "2026-11-01T06:19:24.094275+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     },
@@ -72,12 +72,12 @@
       "id": "DVOVTeDCDxm",
       "url": "https://www.instagram.com/reel/DVOVTeDCDxm/",
       "username": "young_emperors",
-      "views": 29944023,
+      "views": 29950228,
       "metric": "play_count",
-      "likes": 686378,
+      "likes": 686432,
       "comments": 1029,
       "posted_at": "2026-02-26T14:09:30.335Z",
-      "checked_at": "2026-10-29T05:56:31.147619+00:00",
+      "checked_at": "2026-11-01T06:19:24.094275+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     },
@@ -85,12 +85,12 @@
       "id": "DXmMb7pyphc",
       "url": "https://www.instagram.com/reel/DXmMb7pyphc/",
       "username": "young_emperors",
-      "views": 23993551,
+      "views": 23993904,
       "metric": "play_count",
-      "likes": 197322,
+      "likes": 197286,
       "comments": 359,
       "posted_at": "2026-04-26T13:36:34.732Z",
-      "checked_at": "2026-10-29T05:56:31.147619+00:00",
+      "checked_at": "2026-11-01T06:19:24.094275+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     },
@@ -228,12 +228,12 @@
       "id": "DaLtE99zggF",
       "url": "https://www.instagram.com/reel/DaLtE99zggF/",
       "username": "leoniehanne",
-      "views": 10597556,
+      "views": 10597908,
       "metric": "play_count",
-      "likes": 132069,
-      "comments": 2153,
+      "likes": 132068,
+      "comments": 2152,
       "posted_at": "2026-06-29T20:16:29.396Z",
-      "checked_at": "2026-10-29T05:56:31.147619+00:00",
+      "checked_at": "2026-11-01T06:19:24.094275+00:00",
       "source": "auto:filtered",
       "first_found_at": "2026-10-11T05:57:11.623228+00:00"
     },
@@ -264,5 +264,5 @@
       "first_found_at": "2026-10-25T04:52:31.428326+00:00"
     }
   ],
-  "last_api_response_at": "2026-10-31T05:53:44.551300+00:00"
+  "last_api_response_at": "2026-11-01T06:19:24.094275+00:00"
 }
